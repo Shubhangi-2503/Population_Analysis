@@ -2,7 +2,9 @@
 
 ## Project overview
 
+## Question 1 How many countries had no recorded population data (0) for the year 2000? List these countries along with their regions.
 
+![image](./assets/Answer_1.png)
 
 ## Question 2 Calculate the total population for all African countries in 2010. Create a bar chart showing the population distribution across African countries in 2010.
 
