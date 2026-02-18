@@ -1,0 +1,32 @@
+trigger:
+  branches:
+    include:
+    - main
+
+pr:
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Hello
+  displayName: 'Hello Job'
+  
+  steps:
+  - task: Checkout@0
+    displayName: 'Checkout repository'
+  
+  - script: echo "Hello from Azure Pipelines!"
+    displayName: 'Say hello'
+  
+  - script: pwd
+    displayName: 'Print current directory'
+  
+  - script: ls -la
+    displayName: 'List files'
+  
+  - script: echo "Running on $(Agent.OS)"
+    displayName: 'Show environment'
