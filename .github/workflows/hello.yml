@@ -1,0 +1,27 @@
+name: Hello GitHub Action
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Say hello
+        run: echo "Hello from GitHub Actions!"
+      
+      - name: Print current directory
+        run: pwd
+      
+      - name: List files
+        run: ls -la
+      
+      - name: Show environment
+        run: echo "Running on ${{ runner.os }}"
